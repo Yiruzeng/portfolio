@@ -19,3 +19,4 @@ You can checkout the website source code in `index.html`.
 
 ### Version release
 2019.06.11 V1 - static website in CSS/HTML
+2019.06.21 V2 - create RWD webstie 
