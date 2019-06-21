@@ -1,4 +1,3 @@
-
 /*====================== 01. Basic Setting ======================*/
 html, body {
   width: 100%;
@@ -68,7 +67,7 @@ header{
 }
 
 #nav li {
-  display: inline-block;
+display: inline-block;
 }
 
 #nav li a {
@@ -104,6 +103,14 @@ header{
     position: relative;
     vertical-align: middle;
     width: 10%;
+}
+
+.menu-button {
+ display: none;
+  }
+
+.menu-button-checkbox {
+  display: none;
 }
 
 /*====================== 03. Homepage Background Image ======================*/
@@ -189,9 +196,9 @@ h2{
   margin: 30px auto;
 }
 
-.skill ul{
+/* .skill ul{
   list-style-image:url("gesture.svg"); 
-}
+} */
 .skill li{
   font-size: 15px;
   line-height: 30px;
@@ -486,3 +493,211 @@ footer {
 
 
 
+/* mobile css is here */
+
+@media screen and (max-width: 600px) {
+
+/* basic setting */
+
+section{
+  padding: 40px 0;
+}
+
+/* 01-hamburger menu style */
+ .menu-button {
+    display: inline;
+    float: left;
+    font-size: 25px;
+    line-height: 40px;
+    color: #524B57;
+    background: transparent;
+    border: 0;
+  }
+
+  .menu-button:hover{
+    color: rgb(0, 162, 184);
+    -webkit-transition: all .3s linear; 
+    -moz-transition: all .3s linear; 
+    -ms-transition: all .3s linear; 
+    -o-transition: all .3s linear; 
+    transition: all .3s linear;
+  }
+
+  .menu-button-checkbox { 
+    display: inline-flex;
+    width: 52px;
+    height: 40px;
+    margin: 0 0 0 -40px;
+    opacity: 0;
+  }
+
+  .menu-button-checkbox:checked ~ nav #nav{
+    display: block;
+  }
+
+  #nav {
+    display: none;
+    position: fixed;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background-color: #222;
+  }
+
+  #nav li {
+    display: block;
+    text-align: center;
+    padding: 7px 0;
+    border-bottom: 1px solid #333;
+  }
+
+  #nav li a {
+    padding: 20px 12px;
+    color: #ffffff;
+  }
+
+
+/* homepage */
+
+.home_bg{
+  background-size: cover;
+  height: 400px;
+}
+
+.home_bg .overlay{
+  height:400px;
+}
+
+.container_table_cell h2 {
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: inherit;
+}
+
+.social_icons a {
+  margin-top: 8%;
+  width: 60px;
+}
+
+/* about me */
+.summary{
+  display: flex;
+  flex-flow: row wrap-reverse;
+  justify-content: space-evenly;  
+  align-items: center;
+}
+
+.col-left,  .col-right{
+  width: 100%;
+  padding: 20px 15px;
+}
+
+.personal-info h3 {
+  font-size: 1.3em;
+}
+
+.personal-info p {
+  font-size: 1.1em;
+  line-height: 28px;
+}
+
+.button-group .download_cv, .button-group .hire_me {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 2px;
+  padding: 4px;
+}
+
+.button-group a {
+  text-align: center;
+  width: 100%;
+  padding: 12px;
+  margin: 4px;
+}
+
+h2{
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+
+/* what i offer */
+
+.service-items{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-content: center;
+}
+
+.service-content{
+  width: 100%;
+  padding: 15px 15px;
+}
+
+/* lattest work */
+.work-items{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.col-work{
+  width: 100%;
+  padding: 20px 10px;
+}
+
+/* resume */
+
+.col-horizontal{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.col-horizontal .col-item{
+    width: 100%;
+    padding: 15px 15px;
+}
+
+.resume-detail h4 {
+  font-size: 1.2em;
+}
+
+.resume-detail h6 {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+
+}
+
+.resume-detail p {
+  font-size: 1.1em;
+  line-height: 28px;
+}
+
+/* contact me */
+
+.contact-form {
+  width: 100%;
+}
+
+.contact-form .form-input:first-child,
+.contact-form .form-input:nth-child(2)
+{
+  width: 100%;
+  padding: 15px 15px;
+}
+
+.form-submit input{
+  width: 100%;
+  padding: 20px 40px;
+  margin-top: 20px;
+  font-size: 1em; 
+}
+
+/* footer */
+
+.footer-social-icon a i {
+  font-size: 20px;
+  padding: 10px;
+}
